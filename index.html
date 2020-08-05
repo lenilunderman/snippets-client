@@ -93,8 +93,6 @@
           </div>
         </nav>
 
-
-
         <form id="change-password">
           <h4 class="py-4">Change Password</h4>
           <div class="form-group">
@@ -110,6 +108,28 @@
           <button type="submit" class="btn btn-info p-3 btn-change-password"> Change Password </button>
         </form>
         <div class="change-password-message py-2"> </div>
+      </div>
+      <div class="container snippets-container" id="snippets">
+        <h4>Create an snippet:</h4>
+        <form id="create-snip">
+          <div class="form-group">
+            <label for="type">Language Type: </label>
+            <input type="text" id="type" class="form-control p-4"
+              placeholder="please enter the type of script {html, css, javascript.}" name="snippet[type]">
+          </div>
+          <div class="form-group">
+            <label for="content">Content: </label>
+            <input type="text" id="content" class="form-control p-4"
+              placeholder="please enter the content of the script." name="snippet[content]">
+          </div>
+          <div class="form-group">
+            <label for="information"> Information about the snippet: </label>
+            <input type="text" id="information" class="form-control p-4"
+              placeholder="please enter the information about the snippet." name="snippet[information]">
+          </div>
+
+          <button type="submit" class="btn btn-info btn-create-account p-3"> Create Account </button>
+        </form>
       </div>
 
 

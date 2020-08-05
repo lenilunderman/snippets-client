@@ -3,6 +3,7 @@
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
 const authEvents = require('./auth/events')
+const sniptsEvents = require('./snipts/events')
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
@@ -19,4 +20,7 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   // create the sign out event, so the users will be able logged off from the website and the session will be destroyed.
   $('#sign-out').on('click', authEvents.onSignOut)
+
+  // js related to the snippets of the website
+  $('#snippets').on('submit', sniptsEvents.createSnippet)
 })
