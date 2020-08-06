@@ -18,6 +18,28 @@ const createSnippet = function (event) {
 
 }
 
+const onViewSnippets = function (event) {
+    event.preventDefault()
+    api.viewAllSnips()
+        .then(ui.viewAllSnipsSuccess)
+        .catch(ui.viewAllSnipsFailure)
+}
+
+const onDeleteSnippet = function (event) {
+    event.preventDefault()
+    const id = $(event.target).closest('section').data('id')
+    const test = $(`${id}`)
+    console.log(test)
+    console.log(id)
+
+    api.deleteSnippet(id)
+        .then(ui.deleteOneSnip)
+        .catch('fail')
+}
+
+
 module.exports = {
-    createSnippet
+    createSnippet,
+    onViewSnippets,
+    onDeleteSnippet
 }

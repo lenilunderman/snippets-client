@@ -1,26 +1,5 @@
 'use strict'
 
-// our movies data
-const data = {
-  movies: [
-    {
-      title: 'something one',
-      director: 'one'
-    },
-    {
-      title: 'something two',
-      director: 'two'
-    },
-  ]
-}
-// our movies-page template
-const moviesPageTemplate = require('../scripts/templates/snippets.handlebars')
-// give our template the data
-const moviesPageHtml = moviesPageTemplate({ movies: data.movies })
-// inject our compiled HTML into our webpage
-$('#test-hand').append(moviesPageHtml)
-
-
 const authEvents = require('./auth/events')
 const sniptsEvents = require('./snipts/events')
 // use require without a reference to ensure a file is bundled
@@ -42,4 +21,8 @@ $(() => {
 
   // js related to the snippets of the website
   $('#snippets').on('submit', sniptsEvents.createSnippet)
+  // view all snippets of an user
+  $('#snippets-cards').on('submit', sniptsEvents.onViewSnippets)
+  $("#snippets-cards").on("click", ".btn-delete-snip", sniptsEvents.onDeleteSnippet)
+
 })
