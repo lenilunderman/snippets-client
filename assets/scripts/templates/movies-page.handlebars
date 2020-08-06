@@ -1,0 +1,10 @@
+<div class="container">
+    <h2>Movies: </h2>
+    <ul id="movies">
+        {{#each movies as |movie|}}
+        <li>
+            {{movie.title}} By: {{movie.director}}
+        </li>
+        {{/each}}
+    </ul>
+</div>

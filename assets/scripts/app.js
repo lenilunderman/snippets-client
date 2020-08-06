@@ -1,7 +1,26 @@
 'use strict'
 
-// use require with a reference to bundle the file and use it in this file
-// const example = require('./example')
+// our movies data
+const data = {
+  movies: [
+    {
+      title: 'something one',
+      director: 'one'
+    },
+    {
+      title: 'something two',
+      director: 'two'
+    },
+  ]
+}
+// our movies-page template
+const moviesPageTemplate = require('../scripts/templates/snippets.handlebars')
+// give our template the data
+const moviesPageHtml = moviesPageTemplate({ movies: data.movies })
+// inject our compiled HTML into our webpage
+$('#test-hand').append(moviesPageHtml)
+
+
 const authEvents = require('./auth/events')
 const sniptsEvents = require('./snipts/events')
 // use require without a reference to ensure a file is bundled

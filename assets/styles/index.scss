@@ -3,3 +3,23 @@
 .create-snip-message {
     text-align: center;
 }
+
+.oneSnip-card{
+    background-color: rgb(217, 223, 217);
+    padding: 50px;
+    display: flex;
+    border-radius: 15px;
+}
+
+p.title{
+    font-weight: bold;;
+    padding: 10px 0 10px 0px;
+}
+
+.actions{
+    margin-top: 25px;
+}
+
+.actions button{
+    margin-right: 15px;
+}
