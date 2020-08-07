@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
   <div class="master-image">
     <!-- ### Start - This the First Page with Login and Logout -->
     <div class="container h-100">
@@ -32,10 +33,11 @@
       </nav>
       <div class="row game-title py-4 mb-5">
         <div class="col">
-          <h1 class="display-2 text-center "> Snippets < / > </h1>
+          <h1 class="display-2 text-center "> Snippets <span class="icon">< / ></span>
+          </h1>
         </div>
       </div>
-      <div class="row align-items-center">
+      <div class="row align-items-center box-options">
         <!--beginning of create account-->
         <div class="col-12 col-md-6 col-size">
           <div class="container border border-light rounded p-4 col-size">
@@ -57,7 +59,7 @@
               </div>
               <button type="submit" class="btn btn-info btn-create-account p-3"> Create Account </button>
             </form>
-            <div class="create-account-message pt-4"></div>
+            <div class="create-account-message"></div>
           </div>
         </div>
         <!--end of create account -->
@@ -115,21 +117,30 @@
               placeholder="please enter the type of script {html, css, javascript.}" name="snippet[type]">
           </div>
           <div class="form-group">
-            <label for="content">Content: </label>
-            <input type="text" id="content" class="form-control p-4"
-              placeholder="please enter the content of the script." name="snippet[content]">
-          </div>
-          <div class="form-group">
             <label for="information"> Information about the snippet: </label>
             <input type="text" id="information" class="form-control p-4"
               placeholder="please enter the information about the snippet." name="snippet[information]">
           </div>
+
+          <div class="form-group">
+            <label for="content">Content: </label>
+            <textarea id="content" class="form-control p-4"
+            placeholder="please enter the content of the script." name="snippet[content]">
+            </textarea>
+          </div>
+
+          <!-- <div class="form-group">
+            <label for="content">Content: </label>
+            <input type="text" id="content" class="form-control p-4"
+            placeholder="please enter the content of the script." name="snippet[content]">
+          </div> -->
+
           <button type="submit" class="btn btn-info btn-create-account p-3"> Create snippet </button>
           <div class="create-snip-message my-4"></div>
         </form>
       </div>
       <!-- update snippet -->
-      <div class="container snippets-container" id="snippets">
+      <div class="container snippets-container-update" id="snippets">
         <h4>Update an snippet:</h4>
         <form id="update-snip">
           <div class="form-group">
@@ -137,17 +148,26 @@
             <input type="text" id="type" class="form-control p-4"
               placeholder="please enter the type of script {html, css, javascript.}" name="snippet[type]">
           </div>
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="content">Content: </label>
             <input type="text" id="content" class="form-control p-4"
               placeholder="please enter the content of the script." name="snippet[content]">
-          </div>
+          </div> -->
           <div class="form-group">
             <label for="information"> Information about the snippet: </label>
             <input type="text" id="information" class="form-control p-4"
               placeholder="please enter the information about the snippet." name="snippet[information]">
           </div>
-          <button type="submit" class="btn btn-warning btn-update-snip p-3"> Update snippet </button>
+
+          <div class="form-group">
+            <label for="content">Content: </label>
+            <textarea id="content" class="form-control p-4"
+            placeholder="please enter the content of the script." name="snippet[content]">
+            </textarea>
+          </div>
+
+
+          <button type="submit" class="btn btn-info btn-update-snip p-3"> Update snippet </button>
           <div class="create-snip-message my-4"></div>
         </form>
       </div>
@@ -164,9 +184,6 @@
 
         </div>
       </div>
-
-
-
     </div>
   </div>
   <!--  End of Main Page website  -->

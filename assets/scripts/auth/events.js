@@ -29,10 +29,13 @@ const displayChangePassword = function (event) {
     $('.change-password-container').show()
     $('#game-board').hide()
     $('#winner-message').hide()
+    $('#snippets').hide()
+    $('#snippets-cards').hide()
 }
 
 const onChangePassword = function (event) {
     event.preventDefault()
+
     const form = event.target
     const formData = getFormFields(form)
     // Send the information to the API to change password.

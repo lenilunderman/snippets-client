@@ -8,24 +8,38 @@ const SignUpSuccess = function () {
 }
 
 const SignUpFailure = function () {
-    $('.create-account-message').text('Please create an account to access the website!')
+    $('.create-account-message').text('Please create an account to access the website!').addClass('alert alert-info mt-4').fadeOut(6000)
 }
 
 const SignInSuccess = function (response) {
     // hide events
+    //$('.snippets-container').hide()
+    $('.change-password-container').hide()
+    $('.snippets-container-update').hide()
+    $('.box-options').hide()
+
+    // show events
+    $('#navbar-site').show()
     $('.user-dashboard').show()
+
     // storage the user inside the store variable, in which you can access the token.
     store.user = response.user
 }
 
 const SignInFailure = function () {
-    $('.sign-in-message-error').text('Your username or password is incorrect!')
+    $('.sign-in-message-error').text('Your username or password is incorrect!').fadeOut(6000)
     $('.sign-in-message-error').addClass('alert alert-info').show()
 }
 
 const ChangePasswordSuccess = function () {
+    $('#snippets').show()
+    $('#snippets-cards').show()
+    //hide events
+    $('#snippets').show()
+
     $('.change-password-message').text('You successfully changed the password.')
     $('#change-password :input').val('')
+    $('.change-password-container').hide()
 }
 
 const ChangePasswordFailure = function () {
@@ -33,24 +47,16 @@ const ChangePasswordFailure = function () {
 }
 
 const signOutSuccess = function () {
-    // hide events
-    $('#sign-out').hide()
-    $('#change-password').hide()
-    $('.sign-in-message').hide()
-    $('.view-header-image').hide()
-    $('.game-board').hide()
-    $('.sign-in-message-error').hide()
+
     $('.change-password-container').hide()
-    $('#winner-message').hide()
-    $('#number-wins').hide()
+    $('.snippets-container-update').hide()
+    $('.box-options').hide()
+    $('.user-dashboard').hide()
+    $('#navbar-site').hide()
 
     // show events
-    $('.master-image').show()
-    $('.create-account').show()
-    $('#sign-in').show()
+    $('.box-options').show()
 
-    //other events
-    // Clear the fields of the input sign in
     $('#sign-in :input').val('')
 }
 
@@ -77,3 +83,6 @@ module.exports = {
     signOutFailure,
     getStatsSuccess
 }
+
+
+

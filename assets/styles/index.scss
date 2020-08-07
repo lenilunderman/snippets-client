@@ -1,5 +1,11 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanuman&family=Ibarra+Real+Nova&family=Montserrat:wght@300;800&display=swap');
 
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #716f6f;
+}
 .create-snip-message {
     text-align: center;
 }
@@ -38,3 +44,89 @@ code {
     padding: 2px;
     font-size: 14px;
   }
+
+  .box-options{
+    height: 80vh;
+}
+.sign-in{
+    min-height: 462px
+}
+
+.btn-info{
+    background: #e4733d
+}
+
+.game-title h1{
+    color: #e4733d;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 65px;
+    padding-top: 100px
+}
+
+span.icon{
+   color: #000;
+}
+
+.btn-info:hover {
+    color: #fff;
+    background-color: #e67938;
+    border-color: #fff;
+}
+
+.btn-info:active {
+    color: orange;
+    background-color: pink;
+    border-color: #fff;
+}
+
+.btn-info:active {
+    color: red;
+    background-color: green;
+    border-color: #fff;
+}
+
+
+
+h4{
+    font-weight: 600;
+}
+
+label{
+    padding: 5px 0 5px 0;
+}
+
+
+
+
+#create-account input{
+    background-color: #d9d9d9;
+}
+#sign-in input{
+    background-color: #d9d9d9;
+}
+
+#create-account input::placeholder{
+    font-weight: 400;
+}
+
+#sign-in input::placeholder{
+    font-weight: 400;
+}
+
+#snippets form input{
+    background-color: #d9d9d9;
+}
+
+#snippets form textarea{
+    background-color: #d9d9d9;
+}
+
+.btn-create-account:hover{
+    color: #fff;
+    background-color: #e67938;
+    border-color: #fff;
+}
+
+#update-snip .btn-update-snip p-3{
+    background: #e4733d
+}

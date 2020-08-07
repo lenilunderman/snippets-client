@@ -34,6 +34,9 @@ const onDeleteSnippet = function (event) {
 // function to select an snippet and insert inside the form
 const onSelectSnippet = function (event) {
     event.preventDefault()
+    $('#snippets').hide()
+    $('.snippets-container-update').show()
+    $('#snippets-cards').hide()
     // get the data-id from the form ' the id' in that case is the resource id.
     const id = $(event.target).closest('section').data('id')
 
@@ -59,7 +62,7 @@ const onUpdateSnippet = function (event) {
     const formData = getFormFields($('#update-snip')[0])
     // pass two arguments for the function, the ID of the resource, and the data.
     api.onUpdateSnippet(id, formData)
-        .then('work')
+        .then(ui.onUpdateOneSnipSuccess)
         .catch('doesnt work')
 }
 

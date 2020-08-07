@@ -18,6 +18,11 @@ $(() => {
   $('#sign-out').on('click', authEvents.onSignOut)
 
   // js related to the snippets of the website
+
+  //hide events
+  $('#navbar-site').hide()
+  $('.user-dashboard').hide()
+
   // create an snippet for an user
   $('#snippets').on('submit', sniptsEvents.createSnippet)
   // view all snippets of an user
