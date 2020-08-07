@@ -1,19 +1,13 @@
 <div>
     {{#each snippet as |snip|}}
     <section class="card-info" data-id="{{snip._id}}">
-        <p class="title"> Type:
-            {{snip.type}}
-        </p>
-        <p class="title"> Information:
-            {{snip.information}}
-        </p>
-
-        <p class="title">Content: </p>
-        {{snip.content}}
+        <p class="title snippet-type">Type:<span>{{snip.type}}</span></p>
+        <p class="title snippet-information">Information:<span>{{snip.information}}</span></p>
+        <p class="title snippet-content">Content:<span><br><code>{{snip.content}}</code></span></p>
 
         <div class="actions">
             <button class="btn btn-secondary p-3 btn-delete-snip" type="submit"> Delete snippet </button>
-            <button class="btn btn-secondary p-3 btn-update-snip" type="submit"> Update snippet </button>
+            <button class="btn btn-secondary p-3 btn-select-snip" type="submit"> Edit snippet </button>
         </div>
     </section>
     {{/each}}

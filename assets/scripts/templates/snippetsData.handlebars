@@ -1,18 +1,13 @@
 <div class="oneSnip-card">
   <div class="card-info" data-id="{{snippet._id}}">
-    <p class="title"> Type:
-      {{snippet.type}}
-    </p>
-    <p class="title"> Information:
-      {{snippet.information}}
-    </p>
 
-    <p class="title">Content: </p>
-      {{snippet.content}}
+    <p class="title snippet-type">Type:<span>{{snippet.type}}</span></p>
+    <p class="title snippet-information">Information:<span>{{snippet.information}}</span></p>
+    <p class="title snippet-content">Content:<span>{{snippet.content}}</span></p>
 
     <div class="actions">
       <button class="btn btn-secondary p-3" type="submit"> Delete snippet </button>
-    <button class="btn btn-secondary p-3" type="submit"> Update snippet </button>
+      <button class="btn btn-secondary p-3" type="submit"> Update snippet </button>
     </div>
   </div>
 </div>

@@ -2,9 +2,9 @@
 
 const config = require('../config')
 const store = require('../store')
-// CREATE ONE SNIP
+
+// API call to create an snippet
 const createOneSnip = function (formData) {
-    console.log(formData)
     return $.ajax({
         headers: {
             // Access the token on the `store.user` object. This only works if we sign in first
@@ -16,7 +16,7 @@ const createOneSnip = function (formData) {
     })
 }
 
-//view all snippets
+// API call to view all snippets
 const viewAllSnips = function () {
     return $.ajax({
         headers: {
@@ -28,7 +28,7 @@ const viewAllSnips = function () {
     })
 }
 
-//delete snippet
+// API call to delete an snippet
 const deleteSnippet = function (snipID) {
     return $.ajax({
         headers: {
@@ -40,9 +40,22 @@ const deleteSnippet = function (snipID) {
     })
 }
 
+// API call to update one snippet
+const onUpdateSnippet = function (snippetId, formData) {
+    return $.ajax({
+        headers: {
+            // Access the token on the `store.user` object. This only works if we sign in first
+            Authorization: 'Bearer ' + store.user.token
+        },
+        url: config.apiUrl + '/snippets/' + snippetId,
+        method: 'PATCH',
+        data: formData
+    })
+}
 
 module.exports = {
     createOneSnip,
     viewAllSnips,
-    deleteSnippet
+    deleteSnippet,
+    onUpdateSnippet
 }
