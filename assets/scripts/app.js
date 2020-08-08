@@ -3,6 +3,7 @@
 const authEvents = require('./auth/events')
 const sniptsEvents = require('./snipts/events')
 
+
 $(() => {
   //$('.user-dashboard').hide()
   // your JS code goes here
@@ -33,5 +34,6 @@ $(() => {
   $("#snippets-cards").on("click", ".btn-select-snip", sniptsEvents.onSelectSnippet)
   // update the snippet
   $('.btn-update-snip').on('click', sniptsEvents.onUpdateSnippet)
+
 
 })

@@ -1,4 +1,4 @@
-<div>
+{{!-- <div>
     {{#each snippet as |snip|}}
     <section class="card-info" data-id="{{snip._id}}">
         <p class="title snippet-type">Type:<span>{{snip.type}}</span></p>
@@ -11,4 +11,47 @@
         </div>
     </section>
     {{/each}}
+</div> --}}
+
+<div class="cards-snips-grid">
+    <!-- Card -->
+{{#each snippet as |snip|}}
+<section class="card-info d-flex align-items-stretch" data-id="{{snip._id}}">
+<div class="card card-cascade wider text-center border border-0 w-100">
+
+  <!-- Card image -->
+  <div class="view view-cascade gradient-card-header peach-gradient">
+
+    <!-- Title -->
+    <p class="card-header-title mb-3 title snippet-information"><i class="fas fa-sitemap"></i>
+    <strong class="px-2">Information:</strong> {{snip.information}}</p>
+    <!-- Text -->
+    <p class="mb-0 title snippet-type"><i class="fas fa-code"></i>
+    <strong class="px-2">Type:</strong>  {{snip.type}}</p>
+
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body card-body-cascade text-left">
+
+    <!-- Text -->
+    <p class="card-text title snippet-content w-100">
+        <span><pre><code>{{snip.content}}</code></pre></span>
+    </p>
+    <!-- Link -->
+    <a href="#!" class="gren-text d-flex flex-row-reverse p-2">
+      <div class="actions">
+        <button class="btn deep-blue-gradient btn-delete-snip"
+        type="submit">Delete</button><button class="btn peach-gradient btn-select-snip"
+        type="submit">Edit snippet</button>
+      </div>
+    </a>
+
+  </div>
+  <!-- Card content -->
+
+</div>
+<!-- Card -->
+</section>
+{{/each}}
 </div>

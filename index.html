@@ -9,6 +9,22 @@
   <!-- Do not add `script` tags-->
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+
+
+
+
+
 </head>
 
 <body>
@@ -33,13 +49,15 @@
       </nav>
       <div class="row game-title py-4 mb-5">
         <div class="col">
-          <h1 class="display-2 text-center "> Snippets <span class="icon">< / ></span>
+          <h1 class="display-2 text-center "> Snippets <span class="icon">
+              < />
+            </span>
           </h1>
         </div>
       </div>
       <div class="row align-items-center box-options">
         <!--beginning of create account-->
-        <div class="col-12 col-md-6 col-size">
+        <div class="col-12 col-md-6 col-size z-depth-5">
           <div class="container border border-light rounded p-4 col-size">
             <h4>Create an account:</h4>
             <form id="create-account">
@@ -57,7 +75,7 @@
                 <input type="password" id="password_confirmation" class="form-control p-4"
                   placeholder="confirm password" name="credentials[password_confirmation]">
               </div>
-              <button type="submit" class="btn btn-info btn-create-account p-3"> Create Account </button>
+              <button type="submit" class="btn peach-gradient btn-create-account p-3"> Create Account </button>
             </form>
             <div class="create-account-message"></div>
           </div>
@@ -65,7 +83,7 @@
         <!--end of create account -->
 
         <!--begining of login form -->
-        <div class="col-12 col-md-6 ">
+        <div class="col-12 col-md-6 z-depth-5">
           <div class="sign-in unauthorized my-5 container border border-light rounded p-4 col-size">
             <form id="sign-in">
               <h4>Login to your account:</h4>
@@ -78,7 +96,7 @@
                 <input type="password" id="password" class="form-control p-4" placeholder="password"
                   name="credentials[password]">
               </div>
-              <button type="submit" class="btn btn-info btn-login-account p-3"> Login </button>
+              <button type="submit" class="btn peach-gradient btn-login-account p-3"> Login </button>
             </form>
             <div class="sign-in-message-success mt-4"> </div>
             <div class="sign-in-message-error mt-4"> </div>
@@ -108,7 +126,7 @@
         </form>
         <div class="change-password-message py-2"> </div>
       </div>
-      <div class="container snippets-container" id="snippets">
+      <div class="container snippets-container z-depth-4 pt-4 pb-2 rounded-lg" id="snippets">
         <h4>Create an snippet:</h4>
         <form id="create-snip">
           <div class="form-group">
@@ -124,8 +142,8 @@
 
           <div class="form-group">
             <label for="content">Content: </label>
-            <textarea id="content" class="form-control p-4"
-            placeholder="please enter the content of the script." name="snippet[content]">
+            <textarea id="content" class="form-control p-4" placeholder="please enter the content of the script."
+              name="snippet[content]">
             </textarea>
           </div>
 
@@ -135,7 +153,15 @@
             placeholder="please enter the content of the script." name="snippet[content]">
           </div> -->
 
-          <button type="submit" class="btn btn-info btn-create-account p-3"> Create snippet </button>
+          <button type="submit" class="btn peach-gradient btn-create-account p-3"> Create snippet </button>
+
+          <!-- TEST AREA ################ -->
+          <!-- <button type="submit" class="btn purple-gradient somethinggoeshereforcode p-3" id="snippets-cards"> View all snippets </button> -->
+
+
+          <!-- TEST AREA ################ -->
+
+
           <div class="create-snip-message my-4"></div>
         </form>
       </div>
@@ -161,8 +187,8 @@
 
           <div class="form-group">
             <label for="content">Content: </label>
-            <textarea id="content" class="form-control p-4"
-            placeholder="please enter the content of the script." name="snippet[content]">
+            <textarea id="content" class="form-control p-4" placeholder="please enter the content of the script."
+              name="snippet[content]">
             </textarea>
           </div>
 
@@ -172,13 +198,11 @@
         </form>
       </div>
 
-
-
       <!-- view all the snippets -->
       <div class="container snippets-grid mt-4" id="snippets-cards">
         <form id="list-snippets">
-          <h3>View all the snippets</h3>
-          <button type="submit" class="btn btn-secondary p-3"> View all snippets </button>
+          <h4>View all the snippets</h4>
+          <button type="submit" class="btn purple-gradient p-3"> View all snippets </button>
         </form>
         <div class="viewFullSnips">
 

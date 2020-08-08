@@ -1,13 +1,21 @@
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hanuman&family=Ibarra+Real+Nova&family=Montserrat:wght@300;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
 
 body{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Recursive', sans-serif;
     background-color: #716f6f;
 }
 .create-snip-message {
     text-align: center;
+}
+
+pre{
+    height: 220px;
+    overflow-y: scroll;
+    scrollbar-color: #fea469 #fc6662;
+    scrollbar-width: thin;
 }
 
 .oneSnip-card{
@@ -18,7 +26,6 @@ body{
 }
 
 p.title{
-    font-weight: bold;;
     padding: 10px 0 10px 0px;
 }
 
@@ -30,11 +37,20 @@ p.title{
     margin-right: 15px;
 }
 
+.border-light{
+    border-color: transparent !important
+}
+
 .card-info{
-    background-color: #cadfe3;
-    padding: 25px 25px 25px 25px;
-    margin-bottom: 25px;
-    font-size: 18px;
+    padding: 15px 0px 15px 0px;
+    width: 49.5%;
+}
+
+.card-body-cascade{
+    background-color: #d9d9d9db;
+}
+pre code{
+    background-color: #feb26b1a;
 }
 
 code {
@@ -46,10 +62,10 @@ code {
   }
 
   .box-options{
-    height: 80vh;
+    max-height: 80vh;
 }
 .sign-in{
-    min-height: 462px
+    max-height: 384px
 }
 
 .btn-info{
@@ -57,14 +73,14 @@ code {
 }
 
 .game-title h1{
-    color: #e4733d;
+    color:#ee874c;
     font-family: 'Press Start 2P', cursive;
     font-size: 65px;
-    padding-top: 100px
+    padding-top: 50px
 }
 
 span.icon{
-   color: #000;
+    color:#e6b273
 }
 
 .btn-info:hover {
@@ -94,8 +110,6 @@ h4{
 label{
     padding: 5px 0 5px 0;
 }
-
-
 
 
 #create-account input{
@@ -129,4 +143,10 @@ label{
 
 #update-snip .btn-update-snip p-3{
     background: #e4733d
+}
+
+.cards-snips-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
