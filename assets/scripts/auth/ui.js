@@ -53,6 +53,7 @@ const signOutSuccess = function () {
     $('.box-options').hide()
     $('.user-dashboard').hide()
     $('#navbar-site').hide()
+    $('.viewFullSnips').hide()
 
     // show events
     $('.box-options').show()

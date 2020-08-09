@@ -39,17 +39,19 @@ const onSelectSnippet = function (event) {
     $('#snippets-cards').hide()
     // get the data-id from the form ' the id' in that case is the resource id.
     const id = $(event.target).closest('section').data('id')
-
     //grab the information from the form...
-    const typeSnip = $(event.target).closest('section').find('.snippet-type span').text()
-    const informationSnip = $(event.target).closest('section').find('.snippet-information span').text()
-    const contentSnip = $(event.target).closest('section').find('.snippet-content span').text()
+    const typeSnip = $(event.target).closest('section').find('.snippet-type').text()
+    const informationSnip = $(event.target).closest('section').find('.snippet-information').text()
+    const contentSnip = $(event.target).closest('section').find('pre').text()
 
     // select the form that will receive the data and insert the information
     $('#update-snip').attr('data-id', id)
     $('#update-snip #type').val(typeSnip)
     $('#update-snip #information').val(informationSnip)
     $('#update-snip #content').val(contentSnip)
+
+
+
 }
 // functuin to update one snippet
 const onUpdateSnippet = function (event) {

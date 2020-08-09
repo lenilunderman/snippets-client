@@ -19,11 +19,9 @@ const createOneSnipSuccess = function (response) {
 
 // function in case the snippet was not created successfully
 const createOneSnipFailure = function (response) {
-    
+
     $('.create-snip-message').text('Sorry, Please fill the form to create your snippet.').addClass('alert alert-danger').fadeOut(6000)
     //$('.create-snip-message').fadeOut(4500)
-    $('#create-snip :input').val('')
-
 }
 
 // function to view all the snippets created an user
