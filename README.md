@@ -1,5 +1,5 @@
 ![ISnippets Application](https://i.imgur.com/vSuKcMU.png)
-
+bababa
 **Technologies used for the Application**
 
 - HTML
