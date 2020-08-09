@@ -1,5 +1,7 @@
 ![ISnippets Application](https://i.imgur.com/vSuKcMU.png)
 bababa
+fdsafadsfasd
+fdasfdasfasfsa
 **Technologies used for the Application**
 
 - HTML
