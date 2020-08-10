@@ -312,3 +312,10 @@ a:hover{
 button.btn-delete-snip{
     background-color: #a7a39b;
 }
+
+@media only screen and (max-width: 600px){
+    .card-info{
+        padding: 15px 0px 15px 0px;
+        width: 90%;
+    }
+}
