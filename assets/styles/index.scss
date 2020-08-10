@@ -16,7 +16,7 @@ body{
 pre{
     height: 220px;
     overflow-y: scroll;
-    scrollbar-color: #fea469 #fc6662;
+    scrollbar-color: #fea469 #a7a39b;
     scrollbar-width: thin;
 }
 
@@ -313,7 +313,7 @@ button.btn-delete-snip{
     background-color: #a7a39b;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 750px){
     .card-info{
         padding: 15px 0px 15px 0px;
         width: 90%;
