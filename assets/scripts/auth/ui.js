@@ -13,14 +13,12 @@ const SignUpFailure = function () {
 
 const SignInSuccess = function (response) {
     // hide events
-    //$('.snippets-container').hide()
-    $('.change-password-container').hide()
-    $('.snippets-container-update').hide()
-    $('.box-options').hide()
+    $('#createAccount-loginSite').hide()
 
     // show events
-    $('#navbar-site').show()
-    $('.user-dashboard').show()
+    $('.second-page').show()
+    $('.master-image').show()
+    $('nav').show()
 
     // storage the user inside the store variable, in which you can access the token.
     store.user = response.user
@@ -37,9 +35,9 @@ const ChangePasswordSuccess = function () {
     //hide events
     $('#snippets').show()
 
-    $('.change-password-message').text('You successfully changed the password.')
+    $('.change-password-message').text('You successfully changed the password.').fadeOut(6000)
     $('#change-password :input').val('')
-    $('.change-password-container').hide()
+    $('.change-password-container').show()
 }
 
 const ChangePasswordFailure = function () {
@@ -47,16 +45,13 @@ const ChangePasswordFailure = function () {
 }
 
 const signOutSuccess = function () {
-
-    $('.change-password-container').hide()
-    $('.snippets-container-update').hide()
-    $('.box-options').hide()
-    $('.user-dashboard').hide()
-    $('#navbar-site').hide()
+    $('.second-page').hide()
+    $('nav').hide()
     $('.viewFullSnips').hide()
+    $('.user-dashboard').hide()
 
     // show events
-    $('.box-options').show()
+    $('#createAccount-loginSite').show()
 
     $('#sign-in :input').val('')
 }

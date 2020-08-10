@@ -7,7 +7,7 @@
 
 body{
     font-family: 'Recursive', sans-serif;
-    background-color: #716f6f;
+    background-color: #14213D;
 }
 .create-snip-message {
     text-align: center;
@@ -45,7 +45,7 @@ p.title{
 
 .card-info{
     padding: 15px 0px 15px 0px;
-    width: 49.5%;
+    width: 30.5%;
 }
 
 .card-body-cascade{
@@ -57,7 +57,7 @@ pre code{
 
 code {
     font-family: Consolas,"courier new";
-    color: #e24161;
+    color: #d4d1e0;
     background-color: #f1f1f13d;
     padding: 2px;
     font-size: 14px;
@@ -150,7 +150,7 @@ label{
 .cards-snips-grid{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 /* new layout settings */
@@ -292,6 +292,23 @@ a:hover{
         }
 
     }
+}
 
+#snippets{
+    color: $light-white;
+}
 
+.gradient-card-header{
+    background-color:$card-background;
+    color: $light-gray;
+    padding-top: 25px;
+}
+
+.btn-select-snip{
+    background-color: $accent-color;
+    color: $card-background;
+}
+
+button.btn-delete-snip{
+    background-color: #a7a39b;
 }

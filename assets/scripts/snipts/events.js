@@ -34,15 +34,21 @@ const onDeleteSnippet = function (event) {
 // function to select an snippet and insert inside the form
 const onSelectSnippet = function (event) {
     event.preventDefault()
-    $('#snippets').hide()
-    $('.snippets-container-update').show()
-    $('#snippets-cards').hide()
+    $('.second-page').hide()
+    $('.viewFullSnips').hide()
+    $('.master-image').show()
+    //$('.snippets-container-update').show()
+    $('.user-dashboard').show()
     // get the data-id from the form ' the id' in that case is the resource id.
     const id = $(event.target).closest('section').data('id')
     //grab the information from the form...
     const typeSnip = $(event.target).closest('section').find('.snippet-type').text()
     const informationSnip = $(event.target).closest('section').find('.snippet-information').text()
     const contentSnip = $(event.target).closest('section').find('pre').text()
+    // console.log('id:', id)
+    // console.log(typeSnip)
+    // console.log(informationSnip)
+    // console.log(contentSnip)
 
     // select the form that will receive the data and insert the information
     $('#update-snip').attr('data-id', id)
@@ -56,6 +62,7 @@ const onSelectSnippet = function (event) {
 // functuin to update one snippet
 const onUpdateSnippet = function (event) {
     event.preventDefault()
+
     // this is the same id referent to the 'id resource' to be passed as id.
     const id = $('#update-snip').data('id')
     // using the getFormFields, insert the whole form with the data inside.

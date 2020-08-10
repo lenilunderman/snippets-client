@@ -14,26 +14,44 @@ $(() => {
   // create the change password, the user have to be authenticated to be able to see this view to change his own password.
   $('#displayChangePassword').on('click', authEvents.displayChangePassword)
   //displayChangePassword
+
   $('#change-password').on('submit', authEvents.onChangePassword)
   // create the sign out event, so the users will be able logged off from the website and the session will be destroyed.
+
   $('#sign-out').on('click', authEvents.onSignOut)
+  //console.log($('#sign-out').on('click', authEvents.onSignOut))
+
+
+
+
+
+
+
+
+
+
 
   // js related to the snippets of the website
 
   //hide events
-  $('#navbar-site').hide()
+  $('.second-page').hide()
+  $('master-image').show()
   $('.user-dashboard').hide()
+  $('nav').hide()
+
 
   // create an snippet for an user
   $('#snippets').on('submit', sniptsEvents.createSnippet)
   // view all snippets of an user
   $('#snippets-cards').on('click', sniptsEvents.onViewSnippets)
   // delete one snippet
-  $("#snippets-cards").on("click", ".btn-delete-snip", sniptsEvents.onDeleteSnippet)
+  $(".viewFullSnips").on("click", ".btn-delete-snip", sniptsEvents.onDeleteSnippet)
   // select an snippet to be deleted
-  $("#snippets-cards").on("click", ".btn-select-snip", sniptsEvents.onSelectSnippet)
+  $(".viewFullSnips").on("click", ".btn-select-snip", sniptsEvents.onSelectSnippet)
   // update the snippet
   $('.btn-update-snip').on('click', sniptsEvents.onUpdateSnippet)
 
-
 })
+// $( "#snippets-cards" ).on( "submit", "tr", function() {
+//   console.log( $( this ).text() );
+// });

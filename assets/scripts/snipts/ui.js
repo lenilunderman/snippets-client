@@ -26,12 +26,16 @@ const createOneSnipFailure = function (response) {
 
 // function to view all the snippets created an user
 const viewAllSnipsSuccess = function (response) {
+    $('.master-image').hide()
+    $('.user-dashboard').show()
+
     //console.log('storage: ', store.snippet) // client object response
     //console.log('response snippets:', response.snippet) // server info
 
     // adding the response inside the handlebars 'snippetsViewAll.handlebars'
     const snipPageHTMLAll = snipTemplateAll({ snippet: response.snippet })
     // cleaning all the fields, before displaying
+    $('.viewFullSnips').show()
     $('.viewFullSnips').empty()
     // displaying all the snippets updated.
     $('.viewFullSnips').append(snipPageHTMLAll)
@@ -49,10 +53,14 @@ const deleteOneSnip = function (event) {
 }
 
 const onUpdateOneSnipSuccess = function () {
-    $('.snippets-container-update').hide()
+    //$('.snippets-container-update').hide()
+    $('.user-dashboard').hide()
     $('#snippets').show()
     $('#snippets-cards').show()
     $('.viewFullSnips').empty()
+    // $('.user-dashboard').show()
+    $('.second-page').show()
+    $('.viewFullSnips').show()
 }
 
 module.exports = {
