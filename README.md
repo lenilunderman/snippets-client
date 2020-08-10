@@ -13,7 +13,7 @@
 
 **Important Links**
 
-[Snippets Application ](https://github.com/lenilunderman/snippets-client)
+[Snippets Application ](https://lenilunderman.github.io/snippets-client/)
 
 **Description of the Application**
 
