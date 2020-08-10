@@ -27,7 +27,7 @@ $(() => {
   // create an snippet for an user
   $('#snippets').on('submit', sniptsEvents.createSnippet)
   // view all snippets of an user
-  $('#snippets-cards').on('submit', sniptsEvents.onViewSnippets)
+  $('#snippets-cards').on('click', sniptsEvents.onViewSnippets)
   // delete one snippet
   $("#snippets-cards").on("click", ".btn-delete-snip", sniptsEvents.onDeleteSnippet)
   // select an snippet to be deleted

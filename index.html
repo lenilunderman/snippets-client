@@ -10,7 +10,6 @@
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
 
-
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <!-- Google Fonts -->
@@ -20,14 +19,136 @@
   <!-- Material Design Bootstrap -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 
-
-
-
-
-
 </head>
 
 <body>
+  <!-- blue layout front page -->
+  <div class="min-vh-100 first-page">
+    <div class="header container">
+      <div class="logo">
+        <span>
+          <h1>Snippets
+            < />
+          </h1>
+        </span>
+      </div>
+      <nav>
+        <li id="change-password" class="change-password-container"><a href="#">Change Password</a></li>
+        <li id="#sign-out"><a href="#">Sign out</a></li>
+      </nav>
+    </div>
+    <div class="container" id="createAccount-loginSite">
+      <div class="row align-items-center box-options small-container">
+        <!--beginning of create account-->
+        <div class="col-12 col-md-4 col-size z-depth-5">
+          <div class="container border border-light rounded p-4 col-size">
+            <h4>Create an account:</h4>
+            <form id="create-account">
+              <div class="form-group">
+                <label for="email">Email address: </label>
+                <input type="email" id="email" class="form-control p-4" placeholder="email" name="credentials[email]">
+              </div>
+              <div class="form-group">
+                <label for="password">Password: </label>
+                <input type="password" id="password" class="form-control p-4" placeholder="password"
+                  name="credentials[password]">
+              </div>
+              <div class="form-group">
+                <label for="password_confirmation"> Confirm Password: </label>
+                <input type="password" id="password_confirmation" class="form-control p-4"
+                  placeholder="confirm password" name="credentials[password_confirmation]">
+              </div>
+              <button type="submit" class="btn btn-create-account p-3"> Create Account </button>
+            </form>
+            <div class="create-account-message my-2"></div>
+          </div>
+        </div>
+        <!--end of create account -->
+
+
+        <!--begining of login form -->
+        <div class="col-12 col-md-6 offset-md-1 z-depth-4 py-5 yellow-square">
+          <div class="sign-in unauthorized my-5 container border border-light rounded p-4 col-size">
+            <form id="sign-in">
+              <h4>Login to your account:</h4>
+              <div class="form-group">
+                <label for="email">Email address: </label>
+                <input type="email" id="email" class="form-control p-4" placeholder="email" name="credentials[email]">
+              </div>
+              <div class="form-group">
+                <label for="password">Password: </label>
+                <input type="password" id="password" class="form-control p-4" placeholder="password"
+                  name="credentials[password]">
+              </div>
+              <button type="submit" class="btn btn-login-account py-3 px-4"> Login </button>
+            </form>
+            <div class="sign-in-message-success mt-4"></div>
+            <div class="sign-in-message-error mt-4"></div>
+          </div>
+        </div>
+        <!--end of login form-->
+      </div>
+    </div>
+  </div>
+
+  <!-- beginning of page 2-->
+  <div class="container second-page pb-5">
+    <div class="row">
+      <!--blabla-->
+      <div class="col-md-7 snippets-container z-depth-4 pt-4 pb-2 rounded-lg card-1" id="snippets">
+        <h4 class="py-4">Create an snippet:</h4>
+        <form id="create-snip">
+          <div class="form-group">
+            <label for="type">Language Type: </label>
+            <input type="text" id="type" class="form-control p-4"
+              placeholder="please enter the type of script {html, css, javascript.}" name="snippet[type]">
+          </div>
+          <div class="form-group">
+            <label for="information"> Information about the snippet: </label>
+            <input type="text" id="information" class="form-control p-4"
+              placeholder="please enter the information about the snippet." name="snippet[information]">
+          </div>
+          <div class="form-group">
+            <label for="content">Content: </label>
+            <textarea id="content" class="form-control p-4" placeholder="please enter the content of the script."
+              name="snippet[content]"></textarea>
+          </div>
+          <button type="submit" class="btn btn-create-account p-3"> Create snippet </button>
+          <span class="create-snip-message my-4"></span>
+        </form>
+      </div>
+      <div class="col-md-4 offset-md-1 card-2 z-depth-4">
+        <div class="change-password-container authorized my-5 py-5 px-2">
+          <form id="change-password">
+            <h4 class="py-4 text-center">Change Password</h4>
+            <div class="form-group">
+              <label for="password"> Old Password: </label>
+              <input type="password" id="password" class="form-control p-4" placeholder="Please enter your old password"
+                name="passwords[old]">
+            </div>
+            <div class="form-group">
+              <label for="password"> New Password: </label>
+              <input type="password" id="password" class="form-control p-4" placeholder="Please enter your new password"
+                name="passwords[new]">
+            </div>
+            <button type="submit" class="btn p-3 btn-change-password"> Change Password </button>
+          </form>
+          <div class="change-password-message pt-3 text-center"></div>
+        </div>
+      </div>
+    </div>
+    <!--Snippets view and search-->
+    <div class="viewOptions">
+      <div class="viewAll"> <a href="#" id="snippets-cards"> All Snippets</a> </div>
+      <div class="seachSnip">Search for a snippet</div>
+    </div>
+  </div>
+  <!--grid with options goes here ... because i want to use small-container instead-->
+  <!--TODO: Continue doing this part-->
+
+
+
+
 
   <div class="master-image">
     <!-- ### Start - This the First Page with Login and Logout -->
@@ -143,16 +264,8 @@
           <div class="form-group">
             <label for="content">Content: </label>
             <textarea id="content" class="form-control p-4" placeholder="please enter the content of the script."
-              name="snippet[content]">
-            </textarea>
+              name="snippet[content]"></textarea>
           </div>
-
-          <!-- <div class="form-group">
-            <label for="content">Content: </label>
-            <input type="text" id="content" class="form-control p-4"
-            placeholder="please enter the content of the script." name="snippet[content]">
-          </div> -->
-
           <button type="submit" class="btn peach-gradient btn-create-account p-3"> Create snippet </button>
 
           <!-- TEST AREA ################ -->

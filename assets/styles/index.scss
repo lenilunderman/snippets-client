@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanuman&family=Ibarra+Real+Nova&family=Montserrat:wght@300;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Iceland&family=Poppins:wght@300;400;600&display=swap');
+
 body{
     font-family: 'Recursive', sans-serif;
     background-color: #716f6f;
@@ -149,4 +151,147 @@ label{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+/* new layout settings */
+
+$font-headings: 'Iceland', cursive;
+$font-default: 'Poppins', sans-serif;
+
+$background-color: #14213D;
+$accent-color: #FCA311;
+$card-background: #1B253D;
+$light-gray: #E5E5E5;
+$light-white: #FFFFFF;
+
+li{
+    list-style-type: none;
+}
+a:hover{
+    text-decoration: none;
+}
+
+.small-container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#createAccount-loginSite{
+    margin-top: 100px;
+}
+
+
+.first-page{
+    color: $accent-color;
+    background-color: $background-color;
+    position: relative;
+    font-family: $font-default;
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        height: 15vh;
+        align-items: center;
+
+        .logo span h1{
+            font-size: 80px;
+            font-family: $font-headings;
+        }
+
+        nav{
+            display: flex;
+
+            li{
+                padding: 0px 10px 0px 10px;
+            }
+            a{
+                color: $accent-color;
+            }
+        }
+    }
+    .yellow-square{
+        z-index: 10;
+        background-color:$background-color;
+
+        border: solid $accent-color;
+        border-width: 0px 15px 15px 0px;
+    }
+
+    .btn-create-account{
+        color: $background-color;
+        background-color: $light-gray;
+    }
+    .btn-login-account{
+        color: $background-color;
+        background-color: $accent-color ;
+    }
+
+    .iMessageFrontPage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+        padding: 20px;
+        text-align: center;
+        background-color: $card-background;
+    }
+
+}
+
+.second-page{
+    background-color: $background-color;
+    font-family: $font-default;
+    color: $light-white;
+    .card-1{
+        background-color: $card-background;
+    }
+    .card-2{
+        background-color: $card-background;
+    }
+    .btn-change-password{
+        background-color: #a7a39b;
+    }
+    .btn-create-account{
+        background-color: $accent-color;
+        color: $background-color;
+        font-family: $font-default;
+    }
+    .snippets-container{
+        label {
+            border-left: 3px solid $accent-color;
+            padding-left: 10px;
+        }
+        input{
+            padding-bottom: 15px;
+        }
+    }
+
+    .viewOptions{
+        display: flex;
+        padding: 50px 0 5px 0;
+
+        .viewAll{
+            color: $light-white;
+            font-size: 30px;
+            margin-right: 50px;
+            border-bottom: 3px solid $light-white;
+            padding-bottom: 5px;
+            font-family: $font-headings;
+
+            a{
+                color: $light-white;
+            }
+        }
+        .seachSnip{
+            color: $accent-color;
+            font-size: 30px;
+            margin-right: 50px;
+            font-family: $font-headings;
+        }
+
+    }
+
+
 }
