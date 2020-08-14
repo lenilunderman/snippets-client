@@ -5,6 +5,9 @@ const sniptsEvents = require('./snipts/events')
 
 
 $(() => {
+  // $('.modal-test').on('click', function(){
+  //   alert('bla')
+  // })
   //$('.user-dashboard').hide()
   // your JS code goes here
   // create a new account, so that the user will be able to access the website.

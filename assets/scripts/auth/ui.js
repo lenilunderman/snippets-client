@@ -3,12 +3,14 @@ const store = require('../store')
 const { css } = require('jquery')
 
 const SignUpSuccess = function () {
-    $('.create-account-message').text('The account was created successfully.')
+    $('.create-account-message').addClass('alert alert-info mt-4').show()
+    $('.create-account-message').text('The account was created successfully.').fadeToggle(5000)
     $('#create-account :input').val('')
 }
 
 const SignUpFailure = function () {
-    $('.create-account-message').text('Please create an account to access the website!').addClass('alert alert-info mt-4').fadeOut(6000)
+    $('.create-account-message').addClass('alert alert-info mt-4').show()
+    $('.create-account-message').text('Please fill the form to create an account.').fadeToggle(6000)
 }
 
 const SignInSuccess = function (response) {
@@ -22,11 +24,13 @@ const SignInSuccess = function (response) {
 
     // storage the user inside the store variable, in which you can access the token.
     store.user = response.user
+    const userEmailInfo = store.user.email
+    $('.user-greetings').text(`Welcome to the website user: ${userEmailInfo}`)
 }
 
 const SignInFailure = function () {
-    $('.sign-in-message-error').text('Your username or password is incorrect!').fadeOut(6000)
     $('.sign-in-message-error').addClass('alert alert-info').show()
+    $('.sign-in-message-error').text('Your username or password is incorrect!').fadeToggle(7000)
 }
 
 const ChangePasswordSuccess = function () {
@@ -49,6 +53,8 @@ const signOutSuccess = function () {
     $('nav').hide()
     $('.viewFullSnips').hide()
     $('.user-dashboard').hide()
+    $('.sign-in-message-error').removeClass('alert alert-info').hide()
+    $('.create-account-message').removeClass('alert alert-info mt-4').hide()
 
     // show events
     $('#createAccount-loginSite').show()

@@ -20,6 +20,7 @@ const onSignIn = function (event) {
     const data = event.target
     const formData = getFormFields(data)
     // Send the information to the API to sign in the user.
+    console.log(formData)
     api.SignIn(formData)
         .then(ui.SignInSuccess)
         .catch(ui.SignInFailure)
@@ -35,7 +36,7 @@ const displayChangePassword = function (event) {
 
 const onChangePassword = function (event) {
     event.preventDefault()
-    
+
 
     const form = event.target
     const formData = getFormFields(form)
