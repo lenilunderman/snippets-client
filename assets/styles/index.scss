@@ -316,6 +316,15 @@ button.btn-delete-snip{
 .user-greetings .orange{
    color: #FCA311;
 }
+.updateMessageBG{
+    background-color: $accent-color;
+}
+.updateMessageBGM{
+    background-color: #c02a43;
+}
+.bg-md{
+    background-color: $card-background;
+}
 
 @media only screen and (max-width: 850px){
     .card-info{

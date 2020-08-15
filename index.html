@@ -34,32 +34,30 @@
       </div>
       <nav>
         <!-- <li class="change-password-container"><a href="#">Change Password</a></li> -->
-        <li id="sign-out"> <a>Sign out</a></li>
+        <li id="sign-out" class=" modal-test" data-toggle="modal" data-target="#exampleModal"> <a>Sign out</a></li>
       </nav>
       <!-- <button type="button" class="btn btn-primary modal-test" data-toggle="modal" data-target="#exampleModal">
         Launch demo modal
       </button> -->
       <!-- Modal -->
-      <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+            <div class="modal-header bg-md text-light font-weight-bold">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"> You were logged out successfully.</span>
               </button>
             </div>
             <div class="modal-body">
-              ...
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary bg-secondary" data-dismiss="modal"> Close </button>
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
 
     </div>
     <div class="container" id="createAccount-loginSite">
@@ -141,7 +139,8 @@
             <textarea id="content" class="form-control p-4" placeholder="please enter the content of the script."
               name="snippet[content]"></textarea>
           </div>
-          <button type="submit" class="btn btn-create-account p-3"> Create snippet </button>
+          <button type="submit" class="btn btn-create-account p-3 modal-test" data-toggle="modal"
+            data-target="#createsnipModal"> Create snippet </button>
           <span class="create-snip-message my-4"></span>
         </form>
       </div>
@@ -166,6 +165,7 @@
       </div>
     </div>
     <!--Snippets view and search-->
+    <div class="updateMessage my-3 py-3 pl-3"></div>
     <div class="viewOptions">
       <div class="viewAll" id="snippets-cards"><a href="#"> All Snippets</a> </div>
       <!-- <div class="seachSnip">Search for a snippet</div> -->
@@ -201,7 +201,8 @@
             </textarea>
           </div>
 
-          <button type="submit" class="btn btn-info btn-update-snip p-3"> Update snippet </button>
+          <button type="submit" class="btn btn-info btn-update-snip p-3" data-toggle="modal"
+            data-target="#basicExampleModal"> Update snippet </button>
           <div class="create-snip-message my-4"></div>
         </form>
       </div>

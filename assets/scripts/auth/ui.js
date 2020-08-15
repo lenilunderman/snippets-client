@@ -39,13 +39,26 @@ const ChangePasswordSuccess = function () {
     //hide events
     $('#snippets').show()
 
+    if ($('.change-password-message').text() === '') {
+        $('.change-password-message').text('You successfully changed the password.').addClass('alert alert-info mt-2').fadeOut(5000, function () {
+            $('.change-password-message').removeClass('alert alert-info mt-2').show().text('')
+        })
+    }
+
     $('.change-password-message').text('You successfully changed the password.').fadeOut(6000)
     $('#change-password :input').val('')
     $('.change-password-container').show()
 }
 
 const ChangePasswordFailure = function () {
-    $('.change-password-message').text('Ops... there is an error, your old password does not match.')
+    if ($('.change-password-message').text() === '') {
+        $('.change-password-message').text('Ops... there is an error, your old password does not match.').addClass('alert alert-danger mt-2').fadeOut(4500, function () {
+            $('.change-password-message').removeClass('alert alert-danger mt-2').show().text('')
+        })
+    }
+
+
+    //$('.change-password-message').text('Ops... there is an error, your old password does not match.')
 }
 
 const signOutSuccess = function () {
