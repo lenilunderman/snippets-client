@@ -20,7 +20,7 @@ const onSignIn = function (event) {
     const data = event.target
     const formData = getFormFields(data)
     // Send the information to the API to sign in the user.
-    console.log(formData)
+    // console.log(formData)
     api.SignIn(formData)
         .then(ui.SignInSuccess)
         .catch(ui.SignInFailure)
