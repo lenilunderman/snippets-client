@@ -40,17 +40,29 @@ const viewAllSnipsSuccess = function (response) {
     $('.viewFullSnips').show()
     $('.viewFullSnips').empty()
     // displaying all the snippets updated.
+    $('.allsnipMessage').text('Check all the snippets below.').addClass('orange')
     $('.viewFullSnips').append(snipPageHTMLAll)
+
+    console.log(response.snippet)
+    if (response.snippet.length === 0) {
+        if ($('.updateMessage').text() === '') {
+            $('.allsnipMessage').text('').removeClass('orange')
+            $('.updateMessage').text('You do not have snippets.').addClass('updateMessageBGM').fadeOut(9000, function () {
+                $('.updateMessage').removeClass('updateMessageBGM').show().text('')
+            })
+        }
+    }
 }
 
 // function to diplay an error in case there are no snippets.
-const viewAllSnipsFailure = function () {
-    console.log('Error snip failures')
+const viewAllSnipsFailure = function (response) {
+
 }
 
 // function that deletes an snippet and then refresh the page.
 const deleteOneSnip = function (event) {
     // clear the fields, forcing the user to click on view all again, to see the data.
+    $('.allsnipMessage').text('').removeClass('orange')
     $('.viewFullSnips').empty()
 
     if ($('.updateMessage').text() === '') {
@@ -67,6 +79,7 @@ const onUpdateOneSnipSuccess = function () {
         $('.updateMessage').text('You have updated an snippet successfully.').addClass('updateMessageBG').fadeOut(9000, function () {
             $('.updateMessage').removeClass('updateMessageBG').show().text('')
         })
+        $('.allsnipMessage').text('').removeClass('orange')
     }
 
     $('.user-dashboard').hide()
